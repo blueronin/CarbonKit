@@ -699,8 +699,8 @@
     [self.carbonSegmentedControl layoutSubviews];
 }
 
-- (void)setTintColor:(UIColor *)color {
-    self.carbonSegmentedControl.tintColor = color;
+- (void)setToolbarColor:(UIColor *)color {
+    self.toolbar.barTintColor = color;
 }
 
 - (void)setIndicatorColor:(UIColor *)color {
