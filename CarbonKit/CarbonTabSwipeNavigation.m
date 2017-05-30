@@ -699,6 +699,10 @@
     [self.carbonSegmentedControl layoutSubviews];
 }
 
+- (void)setTintColor:(UIColor *)color {
+    self.carbonSegmentedControl.tintColor = color;
+}
+
 - (void)setIndicatorColor:(UIColor *)color {
     self.carbonSegmentedControl.indicator.backgroundColor = color;
 }
