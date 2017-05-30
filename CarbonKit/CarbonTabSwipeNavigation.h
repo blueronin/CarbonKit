@@ -187,6 +187,13 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param color Indicator color
  */
+- (void)setTintColor:(nonnull UIColor *)color;
+
+/**
+ *  Set indicator color
+ *
+ *  @param color Indicator color
+ */
 - (void)setIndicatorColor:(nullable UIColor *)color;
 
 /**
