@@ -80,17 +80,8 @@
         self.contentSize = CGSizeMake(contentWidth, CGRectGetHeight(self.frame));
         
         // Horizontally center tabs
-        CGFloat selfWidth = CGRectGetWidth(self.bounds);
-        if ([_carbonSegmentedControl getWidth] < CGRectGetWidth(self.bounds)) {
-            CGFloat difference = selfWidth - [_carbonSegmentedControl getWidth];
-            self.frame = CGRectMake(difference / 2.0f, 0.0f, selfWidth, CGRectGetHeight(self.bounds));
-        }
-        else {
-            CGRect frame = self.frame;
-            if (!CGRectEqualToRect(frame, CGRectMake(0.0f, 0.0f, selfWidth, CGRectGetHeight(self.bounds)))) {
-                self.frame = CGRectMake(0.0f, 0.0f, selfWidth, CGRectGetHeight(self.bounds));
-            }
-        }
+        NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:_carbonSegmentedControl attribute:NSLayoutAttributeCenterXWithinMargins relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterXWithinMargins multiplier:1.0f constant:0.0f];
+        [NSLayoutConstraint activateConstraints:@[widthConstraint]];
     }
 }
 
