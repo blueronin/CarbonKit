@@ -80,7 +80,7 @@
         self.contentSize = CGSizeMake(contentWidth, CGRectGetHeight(self.frame));
         
         // Horizontally center tabs
-        NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:_carbonSegmentedControl attribute:NSLayoutAttributeCenterXWithinMargins relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterXWithinMargins multiplier:1.0f constant:0.0f];
+        NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterXWithinMargins relatedBy:NSLayoutRelationEqual toItem:self.superview attribute:NSLayoutAttributeCenterXWithinMargins multiplier:1.0f constant:0.0f];
         [NSLayoutConstraint activateConstraints:@[widthConstraint]];
     }
 }
