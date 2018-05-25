@@ -153,7 +153,7 @@
 #pragma mark - Actions
 
 - (void)segmentedTapped:(CarbonTabSwipeSegmentedControl *)segment {
-    [self moveToIndex:segment.selectedSegmentIndex withAnimation:YES];
+    [self moveToIndex:segment.selectedSegmentIndex withAnimation:NO];
 }
 
 - (void)moveToIndex:(NSUInteger)index withAnimation:(BOOL)animate {
