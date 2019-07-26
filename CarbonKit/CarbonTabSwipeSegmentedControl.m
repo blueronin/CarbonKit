@@ -92,7 +92,7 @@
     CGFloat totalWidth = 0;
     for (UIView *segment in self.segments) {
         NSInteger index = [self.segments indexOfObject:segment];
-        CGFloat width = [self getWidthForTitleAtIndex:index];
+        CGFloat width = [self getWidthForSegmentAtIndex:index];
         CGRect segmentRect = segment.frame;
         segmentRect.origin.x = totalWidth;
         segmentRect.size.width = width + _tabExtraWidth;
@@ -103,9 +103,6 @@
     _tabExtraWidth = 0;
 
     // Set the width of UISegmentedControl to fit all segments
-    if (totalWidth < self.superview.frame.size.width) {
-        totalWidth = self.superview.frame.size.width;
-    }
     rect.size.width = totalWidth;
     self.frame = rect;
 
@@ -190,10 +187,6 @@
         return CGRectGetWidth(self.frame) - CGRectGetMinX(self.segments[index].frame);
     }
     return CGRectGetWidth(self.segments[index].frame);
-}
-
-- (CGFloat)getWidthForTitleAtIndex:(NSUInteger)index {
-    return [[self titleForSegmentAtIndex:index] sizeWithAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:14]}].width;
 }
 
 - (CGFloat)getWidth {
