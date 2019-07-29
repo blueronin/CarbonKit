@@ -183,6 +183,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setIndicatorHeight:(CGFloat)height;
 
 /**
+ *  Set toolbar barTint color
+ *
+ *  @param color Toolbar color
+ */
+- (void)setToolbarColor:(nonnull UIColor *)color;
+
+/**
  *  Set indicator color
  *
  *  @param color Indicator color
